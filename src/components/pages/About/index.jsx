@@ -1,14 +1,10 @@
-import Button from '../../atoms/Button';
+import { ABOUT_PAGE_CONFIG } from './about_page_config';
+import TextPageTemplate from '../../templates/TextPageTemplate';
 
 const AboutPage = () => {
-    return (
-        <div>
-            <h1>About Page</h1>
-            <Button>
-                Click me!
-            </Button>
-        </div>
-    );
+    const { title, content } = ABOUT_PAGE_CONFIG;
+
+    return <TextPageTemplate title={title} content={content} />
 };
 
 export default AboutPage;

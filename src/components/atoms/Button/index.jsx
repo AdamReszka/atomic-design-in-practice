@@ -1,8 +1,10 @@
-const Button = ({ children }) => {
+import { StyledButton } from './styled';
+
+const Button = ({ children, ...otherProps }) => {
     return (
-        <button>
+        <StyledButton {...otherProps} >
             {children}
-        </button>
+        </StyledButton>
     );
 };
 

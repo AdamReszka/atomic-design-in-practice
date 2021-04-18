@@ -1,8 +1,10 @@
+import { StyledFooter } from './styles';
+
 const Footer = () => {
     return (
-        <footer>
+        <StyledFooter>
             Copyrights 2021
-        </footer>
+        </StyledFooter>
     );
 };
 

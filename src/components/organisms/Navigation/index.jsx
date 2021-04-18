@@ -1,12 +1,25 @@
-import { Link } from 'react-router-dom';
+import { Navbar, Title, NavigationLinks } from './styles';
+import { NAVIGATION_CONFIG } from './navigation_config';
+import NavigationLink from './NavigationLink';
 
-const Navigation = () => {
+const Navigation = ({ title }) => {
     return (
-        <nav>
-            Navigation
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-        </nav>
+        <Navbar>
+            <Title>    
+                { title }
+            </Title>
+            <NavigationLinks>
+                {
+                    NAVIGATION_CONFIG.map(({ title, to }) => (
+                        <NavigationLink 
+                            title={title}
+                            to={to}
+                            key={title}
+                        />
+                    ))
+                }
+            </NavigationLinks>
+        </Navbar>
     );
 };
 
